@@ -1,7 +1,11 @@
 import React from "react";
 import NavLink from "./NavLink";
 
-const MobileMenuOverlay = ({ links }: { links: any }) => {
+interface MobileMenuOverlayProps {
+  links: { path: string; title: string }[];
+}
+
+const MobileMenuOverlay = ({ links }: MobileMenuOverlayProps) => {
   return (
     <ul className="flex flex-col py-4 items-center">
       {links.map((link: any, index: number) => (
