@@ -12,8 +12,8 @@ const projectsData = [
     description: "P1 description",
     imgUrl: "/img/talkative-cover.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "",
+    previewUrl: "https://www.shawncodeproject.link/",
   },
   {
     id: 2,
@@ -21,17 +21,17 @@ const projectsData = [
     description: "P2 description",
     imgUrl: "/img/triptribe-cover.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "Orient Rally",
+    title: "Orienteer Rally",
     description: "P3 description",
     imgUrl: "/img/orienteer-rally-cover.png",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "",
+    previewUrl: "https://www.youtube.com/watch?v=4TQ7jolPaRg",
   },
 ];
 
@@ -84,7 +84,7 @@ const ProjectSection = () => {
           variants={cardVariants}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
-          transition={{ duration: 0.3, delay: index * 0.6 }}
+          transition={{ duration: 0.3, delay: index * 0.5 }}
         >
           <ProjectCard
             title={project.title}
@@ -99,7 +99,7 @@ const ProjectSection = () => {
   );
 
   return (
-    <section>
+    <section id="projects">
       <h2>My Projects</h2>
       {projectTagSelect}
       {filteredProjectCards}

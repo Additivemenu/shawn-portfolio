@@ -3,7 +3,7 @@ import EmailSection from "@/components/EmailSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
-import ProjectSection from "@/components/ProjectSection";
+import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import Image from "next/image";
 
 export default function Home() {
