@@ -5,6 +5,7 @@ import { title } from "process";
 import React from "react";
 
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const titleIntro = (
@@ -59,18 +60,28 @@ const HeroSection = () => {
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-12">
-        <div className="col-span-7 place-self-center text-center sm:text-left">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-7 place-self-center text-center sm:text-left"
+        >
           {titleIntro}
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
             porro, laborum temporibus corrupti.
           </p>
           {buttonGroup}
-        </div>
+        </motion.div>
 
-        <div className="col-span-5 place-self-center mt-4 lg:mt-0">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-5 place-self-center mt-4 lg:mt-0"
+        >
           {avatar}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
