@@ -34,14 +34,16 @@ const HeroSection = () => {
 
   const buttonGroup = (
     <div>
-      <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
+      {/* <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
         Hire Me
-      </button>
-      <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-800 text-white border mt-3">
-        <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-          Download CV
-        </span>
-      </button>
+      </button> */}
+      <a href="/shawn-li-resume.pdf" download="shawn-li-resume.pdf">
+        <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-800 text-white border mt-3">
+          <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+            Download CV
+          </span>
+        </button>
+      </a>
     </div>
   );
 
@@ -68,8 +70,8 @@ const HeroSection = () => {
         >
           {titleIntro}
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
-            porro, laborum temporibus corrupti.
+            As a full-stack developer, I specialize in building web and mobile
+            applications with a focus on user experience and performance.
           </p>
           {buttonGroup}
         </motion.div>

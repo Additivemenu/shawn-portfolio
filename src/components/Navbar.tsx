@@ -6,11 +6,12 @@ import NavLink from "./NavLink";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import MobileMenuOverlay from "./MobileMenuOverlay";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const navLinks = [
   { title: "About", path: "#about" },
   { title: "Projects", path: "#projects" },
-  { title: "Contact", path: "#contact" },
+  // { title: "Contact", path: "#contact" },
 ];
 
 const Navbar = () => {
@@ -23,7 +24,7 @@ const Navbar = () => {
           href={"/"}
           className="text-2lg md:text-5xl text-white font-semibold"
         >
-          Logo
+          {""}
         </Link>
 
         <div className="mobile-menu block md:hidden">
@@ -46,6 +47,9 @@ const Navbar = () => {
 
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+            <Link href="https://www.linkedin.com/in/xueshuo-li/">
+              <LinkedInIcon />
+            </Link>
             {navLinks.map((navLink, index) => (
               <li key={index}>
                 <NavLink href={navLink.path} title={navLink.title} />
