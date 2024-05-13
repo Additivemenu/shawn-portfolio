@@ -71,7 +71,7 @@ const HeroSection = () => {
           {titleIntro}
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             As a full-stack developer, I specialize in building web and mobile
-            applications with a focus on user experience and performance.
+            applications.
           </p>
           {buttonGroup}
         </motion.div>

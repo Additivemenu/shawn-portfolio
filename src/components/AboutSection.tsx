@@ -18,13 +18,13 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc ml-6">
         <li>JavaScript/TypeScript</li>
-        <li>HTML/CSS</li>
-        <li>Node.js</li>
+        <li>HTML,CSS</li>
         <li>React.js, Next.js, React Native</li>
+        <li>Node.js, Nest.js, Express.js</li>
         <li>RESTful API</li>
-        <li>Express.js, Nest.js</li>
-        <li>PostgreSQL, MongoDB</li>
-        <li>Git</li>
+        <li>PostgreSQL, MongoDB, MySQL</li>
+        <li>AWS cloud services</li>
+        <li>Git, npm, postman</li>
       </ul>
     ),
   },
