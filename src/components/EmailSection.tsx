@@ -13,10 +13,12 @@ interface EmailData {
 }
 
 const EmailSection = () => {
+  // hooks -----------------------------------------------------------
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
+  // handler -----------------------------------------------------------
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault(); // prevent page refresh
     const data: EmailData = {
       email: e.currentTarget.email.value,
       subject: e.currentTarget.subject.value,
@@ -34,7 +36,7 @@ const EmailSection = () => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
+    const response = await fetch(endpoint, options); // this request is handled by Next.js API route
     const resData = await response.json();
     console.log(resData);
 
@@ -52,15 +54,14 @@ const EmailSection = () => {
     <div className="z-10">
       <h5 className="text-xl font-bold text-white my-2">Let&lsquo;s Connect</h5>
       <p className="text-[#ADB7BE] mb-4 max-w-md">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
-        nesciunt voluptatibus doloribus rem numquam modi alias autem a, culpa
-        assumenda saepe perferendis voluptate vel, odio adipisci aliquid,
-        architecto vero nam?
+        Interested in collaborating or have questions? Let&apos;s connect to
+        discuss ideas, projects, and opportunities. I look forward to hearing
+        from you!
       </p>
       <div className="socials flex flex-row gap-2">
-        {/* <Link href="github.com">
-      <GitHubIcon />
-    </Link> */}
+        <Link href="https://github.com/Additivemenu">
+          <GitHubIcon />
+        </Link>
         <Link href="https://www.linkedin.com/in/xueshuo-li/">
           <LinkedInIcon />
         </Link>
@@ -135,11 +136,11 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md: grid-cols-2 my-12 md: my-12 py-24 gap-4 relative"
+      className="grid md: grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute  top-3/4 -left-4 transform -translate-x-1/2 -translate-y-1/2"></div>
-      {/* {letsConnect}
-      <div>{contactForm}</div> */}
+      {letsConnect}
+      <div>{contactForm}</div>
     </section>
   );
 };

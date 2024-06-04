@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
 import MenuIcon from "@mui/icons-material/Menu";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import CloseIcon from "@mui/icons-material/Close";
 import MobileMenuOverlay from "./MobileMenuOverlay";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -46,10 +47,17 @@ const Navbar = () => {
         </div>
 
         <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <Link href="https://www.linkedin.com/in/xueshuo-li/">
-              <LinkedInIcon />
-            </Link>
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 mr-10">
+            <li>
+              <Link href="https://github.com/Additivemenu">
+                <GitHubIcon />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.linkedin.com/in/xueshuo-li/">
+                <LinkedInIcon />
+              </Link>
+            </li>
             {navLinks.map((navLink, index) => (
               <li key={index}>
                 <NavLink href={navLink.path} title={navLink.title} />
