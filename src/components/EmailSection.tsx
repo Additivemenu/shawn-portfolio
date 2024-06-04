@@ -36,16 +36,29 @@ const EmailSection = () => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options); // this request is handled by Next.js API route
-    const resData = await response.json();
-    console.log(resData);
+    try {
+      const response = await fetch(endpoint, options); // this request is handled by Next.js API route
+      const resData = await response.json();
+      console.log(resData);
 
-    if (resData.status === 200) {
       console.log("Email sent successfully!");
       setEmailSubmitted(true);
-    } else {
-      console.log("Email sending failed!");
+    } catch (err) {
+      if (err instanceof Error) {
+        console.error(`Email sending failed! ${err.message}`);
+      }
+    } finally {
+      setTimeout(() => {
+        setEmailSubmitted(false);
+      }, 5000);
     }
+
+    // if (resData.status === 200) {
+    //   console.log("Email sent successfully!");
+    //   setEmailSubmitted(true);
+    // } else {
+    //   console.log("Email sending failed!");
+    // }
   };
 
   // jsx ----------------------------------------------------------------
@@ -127,6 +140,7 @@ const EmailSection = () => {
       >
         Send Message
       </button>
+      {/* visual feedback */}
       {emailSubmitted && (
         <p className="text-green-500 text-sm mt-2">Submit Successfully</p>
       )}

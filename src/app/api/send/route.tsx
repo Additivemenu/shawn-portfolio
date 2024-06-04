@@ -14,8 +14,6 @@ type EmailRequestBody = {
 // use resend to send a react-written email
 // ! this is next.js route handler
 export async function POST(req: NextRequest, res: NextResponse) {
-  // const { body } = await req.json();
-  // const { email, subject, message } = body;
   const { email, subject, message } = await req.json();
   // console.log(email, subject, message);
 
@@ -27,7 +25,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
       react: (
         <div>
           <h1>{subject}</h1>
-          <p>Thank you for contacting us!</p>
+          <p>Thank you for contacting me!</p>
           <p>New message submitted:</p>
           <p>{message}</p>
         </div>
