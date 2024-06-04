@@ -1,0 +1,48 @@
+export const projectsData = [
+  {
+    id: 1,
+    title: "PixCase E-Commerce",
+    description: "Picture your phone case with your favorite photos.",
+    imgUrl: "/img/PixCase-1.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Additivemenu/pixcase",
+    previewUrl: "https://pixcase.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Transcription Test Platform",
+    description: "Streamline test creation and evaluation processes",
+    imgUrl: "/img/TT-1.png",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "https://www.youtube.com/watch?v=Fm2SH1FEX0A",
+  },
+  {
+    id: 3,
+    title: "Talkative Chat App",
+    description:
+      "Online chat application with real-time messaging and user authentication.",
+    imgUrl: "/img/talkative-cover-1.png",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "https://www.shawncodeproject.link/",
+  },
+  {
+    id: 4,
+    title: "Melbourne CBD Tourist Guide App",
+    description: "Discover Melbourne CBD: Your guide to the city's heart.",
+    imgUrl: "/img/IV-A3.png",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "https://www.youtube.com/watch?v=W3o6NCU0yjg",
+  },
+  {
+    id: 5,
+    title: "Orienteer Rally",
+    description: "A mobile social gaming app for orienteering events.",
+    imgUrl: "/img/orienteer-rally-cover.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "",
+    previewUrl: "https://www.youtube.com/watch?v=4TQ7jolPaRg",
+  },
+];
