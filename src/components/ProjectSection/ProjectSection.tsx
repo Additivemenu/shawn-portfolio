@@ -9,7 +9,7 @@ import { projectsData } from "./ProjectData";
 const ProjectSection = () => {
   const [selectedTag, setSelectedTag] = useState("All");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true }); // framer-motion hook
 
   const handleTagClick = (newTag: string) => {
     setSelectedTag(newTag);
@@ -20,6 +20,7 @@ const ProjectSection = () => {
     project.tag.includes(selectedTag)
   );
 
+  // framer-motion variants for animation 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
     animate: { y: 0, opacity: 1 },
