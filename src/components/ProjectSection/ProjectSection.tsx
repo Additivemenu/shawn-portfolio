@@ -15,15 +15,15 @@ const ProjectSection = () => {
     setSelectedTag(newTag);
   };
 
-  // derived state
+  // derived (i.e. computed) state
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(selectedTag)
   );
 
-  // framer-motion variants for animation 
+  // ! framer-motion variants for defining animation states
   const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
+    initial: { y: 50, opacity: 0 }, // initial state:  hidden, placed 50px below
+    animate: { y: 0, opacity: 1 }, // animate state: visible, placed at original position
   };
 
   // jsx ----------------------------------------------------------------
@@ -55,8 +55,8 @@ const ProjectSection = () => {
           key={project.id}
           variants={cardVariants}
           initial="initial"
-          animate={isInView ? "animate" : "initial"}
-          transition={{ duration: 0.3, delay: index * 0.5 }}
+          animate={isInView ? "animate" : "initial"} // toggle betwwen animation states
+          transition={{ duration: 0.3, delay: index * 0.5 }} // define how to toggle between animation states
         >
           <ProjectCard
             title={project.title}
