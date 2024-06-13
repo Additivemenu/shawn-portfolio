@@ -8,6 +8,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import CloseIcon from "@mui/icons-material/Close";
 import MobileMenuOverlay from "./MobileMenuOverlay";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { motion } from "framer-motion";
 
 const navLinks = [
   { title: "About", path: "#about" },
@@ -50,12 +51,22 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 mr-10">
             <li>
               <Link href="https://github.com/Additivemenu">
-                <GitHubIcon />
+                <motion.div
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <GitHubIcon />
+                </motion.div>
               </Link>
             </li>
             <li>
               <Link href="https://www.linkedin.com/in/xueshuo-li/">
-                <LinkedInIcon />
+                <motion.div
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <LinkedInIcon />
+                </motion.div>
               </Link>
             </li>
             {navLinks.map((navLink, index) => (

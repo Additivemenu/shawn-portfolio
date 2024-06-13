@@ -5,6 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface EmailData {
   email: string;
@@ -73,10 +74,14 @@ const EmailSection = () => {
       </p>
       <div className="socials flex flex-row gap-2">
         <Link href="https://github.com/Additivemenu">
-          <GitHubIcon />
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+            <GitHubIcon />
+          </motion.div>
         </Link>
         <Link href="https://www.linkedin.com/in/xueshuo-li/">
-          <LinkedInIcon />
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+            <LinkedInIcon />
+          </motion.div>
         </Link>
       </div>
     </div>
