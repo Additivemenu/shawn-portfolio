@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState, useTransition } from "react";
-import TabButton from "./TabButton";
+import TabButton from "./_components/tab-button";
 import { Ultra } from "next/font/google";
 
 enum TabOptions {
@@ -17,14 +17,12 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc ml-6">
-        <li>JavaScript/TypeScript</li>
+        <li>JavaScript/TypeScript, Python</li>
         <li>HTML,CSS</li>
-        <li>React.js, Next.js, React Native</li>
-        <li>Node.js, Nest.js, Express.js</li>
-        <li>RESTful API</li>
-        <li>PostgreSQL, MongoDB, MySQL</li>
-        <li>AWS cloud services</li>
-        <li>Git, npm, postman</li>
+        <li>Next.js, React, React Native</li>
+        <li>Django, Nest.js, Express.js</li>
+        <li>PostgreSQL, MongoDB</li>
+        <li>Linux, AWS, Docker, Kubernetes</li>
       </ul>
     ),
   },
@@ -55,10 +53,16 @@ const TAB_DATA = [
     title: "Experience",
     id: "experience",
     content: (
-      <ul className="list-disc ml-6">
-        <li>Full-Stack Developer Intern, Stay or go</li>
-        <li className="list-disc ml-6">2023 - 2024</li>
-      </ul>
+      <div>
+        <ul className="list-disc ml-6">
+          <li>Software Engineer, Rhombus AI</li>
+          <li className="list-disc ml-6">2024.08 - present</li>
+        </ul>
+        <ul className="list-disc ml-6">
+          <li>Software Engineer Intern, Stay or go</li>
+          <li className="list-disc ml-6">2023.11 - 2024.02</li>
+        </ul>
+      </div>
     ),
   },
 ];
@@ -86,13 +90,20 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Self-motivated master of IT graduate at University of Melbourne
-            specialising in both Front-End and Back-End web application
-            development, proficient in JavaScript/TypeScript (React & Nest) and
-            RESTful API
+            Full-stack software engineer specializing in React ecosystem and
+            Django/Express.js backend development. Recent experience in
+            developing web applications and data pipeline interfaces with a
+            focus on user experience.
           </p>
           {/* tab select bar */}
           <div className="flex flex-row mt-8">
+            <TabButton
+              active={tab === TabOptions.Experience}
+              selectTab={() => handleTabChange(TabOptions.Experience)}
+            >
+              {" "}
+              Experience{" "}
+            </TabButton>
             <TabButton
               active={tab === TabOptions.Skills}
               selectTab={() => handleTabChange(TabOptions.Skills)}
@@ -106,13 +117,6 @@ const AboutSection = () => {
             >
               {" "}
               Education{" "}
-            </TabButton>
-            <TabButton
-              active={tab === TabOptions.Experience}
-              selectTab={() => handleTabChange(TabOptions.Experience)}
-            >
-              {" "}
-              Experience{" "}
             </TabButton>
           </div>
           {/* tabpanel content */}
